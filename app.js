@@ -1,5 +1,6 @@
 const express = require("express");
 const next = require("next");
+const path = require("path");
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -12,6 +13,10 @@ app.prepare()
     server.get('*', (req, res, next) => {
       return handle(req, res);
     });
+
+    server.use('/public', express.static(path.join(__dirname, 'public'),{
+      
+    }))
 
     server.listen(3000, (err) => {
       if (err) throw err;

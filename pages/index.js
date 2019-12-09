@@ -7,6 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
 import Footer from '../components/footer';
+import Cards from "../components/Cards";
 
 const Index = () => (
   <>
@@ -37,9 +38,10 @@ const Index = () => (
     <Button variant="primary">Find my Cruise</Button>
   </p>
   </Jumbotron>
-  <Footer>
 
-  </Footer>
+  <Cards></Cards>
+
+  <Footer></Footer>
   </>
   )
   export default Index;
