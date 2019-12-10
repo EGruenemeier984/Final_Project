@@ -17,7 +17,7 @@ const Index = () => (
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
       <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#link">Ships</Nav.Link>
+      <Nav.Link href="/ships">Ships</Nav.Link>
       <NavDropdown title="More" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Port Schedules</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Itineraries</NavDropdown.Item>
@@ -28,7 +28,6 @@ const Index = () => (
     </Nav>
   </Navbar.Collapse>
 </Navbar>
-<br/>
   <Jumbotron>
   <h1>Welcome to Cruise Lookup</h1>
   <p>

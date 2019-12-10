@@ -6,17 +6,20 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
+
 app.prepare()
   .then(() => {
     const server = express();
 
+    server.use('/public', express.static(path.join(__dirname, 'public')));
+
+    server.get('/ships', (req, res) => {
+      return app.render(req, res, '/ships', req.query);
+    });
+
     server.get('*', (req, res, next) => {
       return handle(req, res);
     });
-
-    server.use('/public', express.static(path.join(__dirname, 'public'),{
-      
-    }))
 
     server.listen(3000, (err) => {
       if (err) throw err;

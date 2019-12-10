@@ -33,7 +33,7 @@ const Cards = () => {
             </Col>
             <Col>
             <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="" />
+                    <Card.Img variant="top" src="../public/images/CruisePorts.jpg" />
                 <Card.Body>
                     <Card.Title>Card Title</Card.Title>
                     <Card.Text>
@@ -54,7 +54,7 @@ const Cards = () => {
             </Col>
             <Col>
             <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="" />
+                    <Card.Img variant="top" src="../public/images/OceanView.jpg" />
                 <Card.Body>
                     <Card.Title>Card Title</Card.Title>
                     <Card.Text>
