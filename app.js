@@ -27,7 +27,7 @@ app.prepare()
     server.listen(3000, (err) => {
       if (err) throw err;
       console.log("Server is up on 3000, BRO");
-      axiosRequest();
+      // axiosRequest();
     });
   })
   .catch((ex) => {
@@ -35,28 +35,28 @@ app.prepare()
     process.exit(1);
   })
 
-function axiosRequest() {
-  const key = '4d821870011e1fdaf2e87a6c90a52d74';
-  var lat = '37.8262';
-  var long ='50.1243';
+// function axiosRequest() {
+//   const key = '4d821870011e1fdaf2e87a6c90a52d74';
+//   var lat = '37.8262';
+//   var long ='50.1243';
 
-  axios({
-      "method": "GET",
-      "url": `https://api.darksky.net/forecast/${key}/${lat},${long}`,
-      "headers": {
-        "content-type": "application/octet-stream",
-        "API_key": "4d821870011e1fdaf2e87a6c90a52d74",
-      },
-      "params": {
-        "lang": "en",
-        "units": "auto"
-      }
+//   axios({
+//       "method": "GET",
+//       "url": `https://api.darksky.net/forecast/${key}/${lat},${long}`,
+//       "headers": {
+//         "content-type": "application/octet-stream",
+//         "API_key": "4d821870011e1fdaf2e87a6c90a52d74",
+//       },
+//       "params": {
+//         "lang": "en",
+//         "units": "auto"
+//       }
 
-    })
-    .then((response) => {
-      console.log(response.data)
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-}
+//     })
+//     .then((response) => {
+//       console.log(response.data)
+//     })
+//     .catch((error) => {
+//       console.log(error)
+//     })
+// }
