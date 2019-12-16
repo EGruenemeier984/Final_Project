@@ -11,6 +11,7 @@ const Navigation = () => {
             <Nav className="mr-auto">
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/ships">Ships</Nav.Link>
+                <Nav.Link href="/weather">Weather</Nav.Link>
             <NavDropdown title="More" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Port Schedules</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Itineraries</NavDropdown.Item>

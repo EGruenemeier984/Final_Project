@@ -1,22 +1,36 @@
+import Navigation from '../components/Navigation';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Form from 'react-bootstrap/Form'
 import fetch from 'isomorphic-unfetch';
 
-function Weather(props) {
-return (
-  <div>
-    <h1>Weather</h1>
-    {props.temp}
-  </div>
-  )
-}
+var lat = "32.3";
+var long = "32.23";
 
-Weather.getInitialProps = async ({ req }) => {
-  const key = '4d821870011e1fdaf2e87a6c90a52d74';
-  var lat = '37.8262';
-  var long ='50.1243';
-  const res = await fetch(`https://api.darksky.net/forecast/${key}/${lat},${long}`)
-  const json = await res.json()
-  console.log(json);
-  return { temp: json.timezone } 
-}
+const weather = props => (
+<>
+    <Navigation></Navigation>
+    <h1 style={{textAlign: "center"}}>Weather</h1>
+    <hr></hr>
+    <Form.Control type="text" placeholder="Normal text" />
+    <h3>Temperature</h3>
+    <h4>{props.weather.temperature}</h4>
+    
+</>
+);
 
-export default Weather;
+weather.getInitialProps = async function() {
+	const res = await fetch(`https://api.darksky.net/forecast/4d821870011e1fdaf2e87a6c90a52d74/${lat},${long}`, {
+		"method": "GET",
+		"headers": {
+			"key": "4d821870011e1fdaf2e87a6c90a52d74"
+		}
+	});
+	const data = await res.json();
+
+	console.log(`Logged Data: ${data}`);
+
+	return{
+		weather: data.currently
+	};
+};
+export default weather;

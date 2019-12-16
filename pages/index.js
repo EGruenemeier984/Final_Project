@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Footer from '../components/Footer';
 import Cards from "../components/Cards";
 import Navigation from '../components/Navigation';
-import Weather from "../components/Weather";
+
 
 
 const Index = () => (
@@ -23,8 +23,11 @@ const Index = () => (
   </Jumbotron>
 
   <Cards></Cards>
+  
   <Footer></Footer>
   </>
-  )
-  export default Index;
+);
+
+
+export default Index;
   
