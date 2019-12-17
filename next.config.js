@@ -14,3 +14,8 @@ const withCSS = require('@zeit/next-css')
         return config;
       }
     });
+    exports.default = {
+      env: {
+        DarkSkyAPI_Key: process.env.DarkSkyAPI_Key
+      }
+    };
